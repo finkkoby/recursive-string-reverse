@@ -1,5 +1,9 @@
 function reverseString(str) {
-  // type your code here
+  if (str.length <= 1) {
+    return str
+  } else {
+    return str[str.length - 1] + reverseString(str.slice(0, str.length - 1))
+  }
 }
 
 if (require.main === module) {
@@ -16,4 +20,5 @@ if (require.main === module) {
 module.exports = reverseString;
 
 // Please add your pseudocode to this file
+
 // And a written explanation of your solution
